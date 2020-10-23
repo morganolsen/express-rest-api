@@ -1,4 +1,4 @@
 
 # Express REST API
 
-This is my 9th project for the techdegree.
+This is a simple REST API application created with Node JS using Express and Sequelize.
