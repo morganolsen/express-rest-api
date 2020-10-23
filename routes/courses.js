@@ -11,7 +11,7 @@ const { Course, User } = require('../models');
 // GET /api/courses 200 - Returns a list of courses (including the user that owns each course)
 router.get('/', asyncHandler(async(req, res) => {
     const courses = await Course.findAll({
-        attributes: ['title', 'description', 'estimatedTime', 'materialsNeeded', 'userId'],
+        attributes: ['id', 'title', 'description', 'estimatedTime', 'materialsNeeded', 'userId'],
         include: [
             {
                 model: User
