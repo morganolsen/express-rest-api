@@ -21,7 +21,6 @@ router.get('/', authenticate, asyncHandler(async(req, res) => {
 
 // POST /api/users 201
 router.post('/', asyncHandler(async(req, res) => {
-    console.log(req.body);
     await User.create(req.body);
     res.location('/');
     res.status(201).end();
